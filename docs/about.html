@@ -51,36 +51,7 @@
             </div>
         </div>
     </header>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Header scroll effect
-            const header = document.querySelector('.site-header');
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const navList = document.querySelector('.nav-list');
-            
-            // Scroll effect
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-            
-            // Initialize header state on page load
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            }
-            
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', function() {
-                navList.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
-                mobileMenuToggle.classList.toggle('open');
-            });
-        });
-    </script>    
+      
     <main>
         <!-- Page Header -->
         <section class="page-header">
