@@ -17,11 +17,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <!-- Main CSS (Global styles only) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- About Page Specific CSS -->
-    <link rel="stylesheet" href="css/components/about-page.css">
 </head>
 <body>
     <header class="site-header">
@@ -41,51 +38,58 @@
                     </button>
                     
                     <ul class="nav-list">
-                        <li><a href="index.html" class="">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html" class="active">About</a></li>
-                        <li><a href="services.html" class="">Services</a></li>
-                        <li><a href="portfolio.html" class="">Portfolio</a></li>
-                        <li><a href="contact.html" class="contact-link ">Contact</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html" class="contact-link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
       
-    <main>
-        <!-- Page Header -->
-        <section class="page-header">
+    <main class="about-page">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="page-hero-bg"></div>
             <div class="container">
-                <h1>About Us</h1>
+                <div class="page-hero-content">
+                    <span class="hero-label">About Boulder Marketing</span>
+                    <h1>Purpose-Driven Marketing</h1>
+                    <p>We bring fresh perspectives and strategic thinking to help small businesses thrive online.</p>
+                </div>
             </div>
-            <div class="page-header-shape"></div>
+            <div class="page-hero-wave">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0 C300,60 600,60 900,20 L1200,40 L1200,120 L0,120 Z" fill="var(--bg-color)"></path>
+                </svg>
+            </div>
         </section>
 
         <!-- Mission Section -->
         <section class="mission-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Who We Are</span>
-                    <h2>Our Mission</h2>
-                </div>
-                
-                <div class="mission-content">
-                    <p class="mission-intro">Boulder Marketing is dedicated to bringing life to small businesses online. We combine fresh perspectives with strategic thinking to create digital experiences that truly resonate.</p>
-                    
-                    <p>We believe marketing is more than metrics — it's about bringing your vision to life. Our work is rooted in purpose, driven by excellence, and focused on helping your business thrive in the digital landscape.</p>
+                <div class="mission-grid">
+                    <div class="mission-content">
+                        <span class="section-badge">Who We Are</span>
+                        <h2>Our Mission</h2>
+                        <p class="lead-text">Boulder Marketing is dedicated to bringing life to small businesses online. We combine fresh perspectives with strategic thinking to create digital experiences that truly resonate.</p>
+                        <p>We believe marketing is more than metrics — it's about bringing your vision to life. Our work is rooted in purpose, driven by excellence, and focused on helping your business thrive in the digital landscape.</p>
+                    </div>
                     
                     <div class="mission-stats">
-                        <div class="mission-stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Focused</span>
+                        <div class="stat-card glass-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Client Focused</div>
                         </div>
-                        <div class="mission-stat">
-                            <span class="stat-number">24+</span>
-                            <span class="stat-label">Businesses Transformed</span>
+                        <div class="stat-card glass-card">
+                            <div class="stat-number">24+</div>
+                            <div class="stat-label">Businesses Transformed</div>
                         </div>
-                        <div class="mission-stat">
-                            <span class="stat-number">5★</span>
-                            <span class="stat-label">Client Satisfaction</span>
+                        <div class="stat-card glass-card">
+                            <div class="stat-number">5★</div>
+                            <div class="stat-label">Client Satisfaction</div>
                         </div>
                     </div>
                 </div>
@@ -96,153 +100,147 @@
         <section class="values-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-label">What Drives Us</span>
+                    <span class="section-badge">What Drives Us</span>
                     <h2>Core Values</h2>
                 </div>
                 
                 <div class="values-grid">
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="0">
-                        <div class="value-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                    <div class="value-card glass-card" data-aos="fade-up">
+                        <div class="value-icon-wrapper">
+                            <div class="value-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
                         </div>
-                        <div class="value-content">
-                            <h3>Fresh Perspectives</h3>
-                            <p>Modern strategies with innovative approaches.</p>
-                            <ul class="value-features">
-                                <li>Current digital techniques</li>
-                                <li>Data-driven decisions</li>
-                                <li>Creative problem solving</li>
-                            </ul>
-                        </div>
+                        <h3>Fresh Perspectives</h3>
+                        <p>Modern strategies with innovative approaches.</p>
+                        <ul class="value-list">
+                            <li><i class="fas fa-check"></i> Current digital techniques</li>
+                            <li><i class="fas fa-check"></i> Data-driven decisions</li>
+                            <li><i class="fas fa-check"></i> Creative problem solving</li>
+                        </ul>
                     </div>
                     
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="value-icon">
-                            <i class="fas fa-seedling"></i>
+                    <div class="value-card glass-card" data-aos="fade-up">
+                        <div class="value-icon-wrapper">
+                            <div class="value-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
                         </div>
-                        <div class="value-content">
-                            <h3>Vision Focused</h3>
-                            <p>Building your business with purpose.</p>
-                            <ul class="value-features">
-                                <li>Brand story development</li>
-                                <li>Authentic online presence</li>
-                                <li>Customer-centered strategy</li>
-                            </ul>
-                        </div>
+                        <h3>Vision Focused</h3>
+                        <p>Building your business with purpose.</p>
+                        <ul class="value-list">
+                            <li><i class="fas fa-check"></i> Brand story development</li>
+                            <li><i class="fas fa-check"></i> Authentic online presence</li>
+                            <li><i class="fas fa-check"></i> Customer-centered strategy</li>
+                        </ul>
                     </div>
                     
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="value-icon">
-                            <i class="fas fa-handshake"></i>
+                    <div class="value-card glass-card" data-aos="fade-up">
+                        <div class="value-icon-wrapper">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
                         </div>
-                        <div class="value-content">
-                            <h3>Integrity Driven</h3>
-                            <p>We don't just market — we mean it.</p>
-                            <ul class="value-features">
-                                <li>Transparent communication</li>
-                                <li>Ethics in every decision</li>
-                                <li>Long-term partnership focus</li>
-                            </ul>
-                        </div>
+                        <h3>Integrity Driven</h3>
+                        <p>We don't just market — we mean it.</p>
+                        <ul class="value-list">
+                            <li><i class="fas fa-check"></i> Transparent communication</li>
+                            <li><i class="fas fa-check"></i> Ethics in every decision</li>
+                            <li><i class="fas fa-check"></i> Long-term partnership focus</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <!-- Background patterns -->
-            <div class="bg-pattern pattern-dots about-pattern-1"></div>
-            <div class="bg-pattern pattern-lines about-pattern-2"></div>
         </section>
 
-        <!-- Story Section -->
-        <section class="story-section">
+        <!-- Story/Process Combined Section -->
+        <section class="story-process-section">
             <div class="container">
-                <div class="story-content-wrapper">
-                    <div class="story-image">
-                        <img src="images/boulder-skyline.jpg" alt="Boulder skyline view" class="rounded-image">
-                        <div class="story-image-accent"></div>
+                <div class="story-grid">
+                    <div class="story-visual">
+                        <div class="story-image-wrapper">
+                            <img src="images/boulder-skyline.jpg" alt="Boulder skyline view">
+                            <div class="image-overlay"></div>
+                        </div>
                     </div>
                     
                     <div class="story-content">
-                        <div class="story-header">
-                            <span class="section-label">Our Approach</span>
-                            <h2>Bringing Visions to Life</h2>
-                        </div>
-                        
+                        <span class="section-badge">Our Approach</span>
+                        <h2>Bringing Visions to Life</h2>
                         <p>We specialize in transforming your business vision into digital reality. Our approach combines strategic thinking with creative execution, helping small businesses stand out in a crowded digital landscape.</p>
-                        
                         <p>Whether you need a compelling online presence or a complete digital strategy, we're dedicated to creating authentic marketing solutions that truly connect with your audience.</p>
+                    </div>
+                </div>
+                
+                <!-- Process Steps -->
+                <div class="process-wrapper">
+                    <div class="section-header">
+                        <span class="section-badge">How We Work</span>
+                        <h2>Our Process</h2>
+                    </div>
+                    
+                    <div class="process-grid">
+                        <div class="process-card" data-aos="fade-up">
+                            <div class="process-number">1</div>
+                            <div class="process-content">
+                                <h3>Discover</h3>
+                                <p>We start by understanding your business, values, and goals. This foundation shapes everything we do.</p>
+                            </div>
+                        </div>
                         
-                        <a href="contact.html" class="btn btn-primary mt-4">Work With Us</a>
+                        <div class="process-card" data-aos="fade-up">
+                            <div class="process-number">2</div>
+                            <div class="process-content">
+                                <h3>Create</h3>
+                                <p>We develop a tailored strategy and begin building the assets that will bring your vision to life.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-card" data-aos="fade-up">
+                            <div class="process-number">3</div>
+                            <div class="process-content">
+                                <h3>Implement</h3>
+                                <p>We execute with excellence, ensuring every detail aligns with your brand and resonates with your audience.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-card" data-aos="fade-up">
+                            <div class="process-number">4</div>
+                            <div class="process-content">
+                                <h3>Grow</h3>
+                                <p>We measure results, refine approaches, and help your business thrive in the digital landscape.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Section -->
-        <section class="process-section">
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-bg-gradient"></div>
             <div class="container">
-                <div class="section-header">
-                    <span class="section-label">How We Work</span>
-                    <h2>Our Process</h2>
-                </div>
-                
-                <div class="process-steps">
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="0">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Discover</h3>
-                            <p>We start by understanding your business, values, and goals. This foundation shapes everything we do.</p>
-                        </div>
+                <div class="cta-content">
+                    <h2>Ready to Work Together?</h2>
+                    <p>Let's bring your vision to life with purpose-driven marketing.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-white btn-pulse">
+                            <span>Get Started</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="services.html" class="btn btn-outline-white">
+                            <span>Our Services</span>
+                        </a>
                     </div>
-                    
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Create</h3>
-                            <p>We develop a tailored strategy and begin building the assets that will bring your vision to life.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Implement</h3>
-                            <p>We execute with excellence, ensuring every detail aligns with your brand and resonates with your audience.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h3>Grow</h3>
-                            <p>We measure results, refine approaches, and help your business thrive in the digital landscape.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="process-cta">
-                    <a href="services.html" class="btn btn-outline">Explore Our Services</a>
                 </div>
             </div>
         </section>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Reveal elements on scroll
-                const revealElements = document.querySelectorAll('[data-aos]');
-                const revealOnScroll = function() {
-                    revealElements.forEach(function(el) {
-                        if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
-                            el.classList.add('revealed');
-                        }
-                    });
-                };
-                
-                window.addEventListener('scroll', revealOnScroll);
-                revealOnScroll(); // Initial check
-            });
-        </script>
     </main>
+    
+    <!-- Scroll to top button -->
+    <a href="#" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
     
     <footer class="site-footer">
         <div class="container">
@@ -298,10 +296,7 @@
             </div>
         </div>
     </footer>
-    <!-- jQuery (Only if needed for testimonial slider) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
-    <!-- Custom JS -->
     <script src="js/main.js"></script>
 </body>
 </html>
