@@ -17,56 +17,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <style>
-        /* Additional styles for portfolio links */
-        .portfolio-item {
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .portfolio-overlay {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-        
-        .view-project-btn {
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
-            padding: 8px 16px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            margin-top: 10px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
-        .view-project-btn:hover {
-            background: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .external-link-icon {
-            margin-left: 5px;
-            font-size: 12px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
-<body class="">
+<body>
     <header class="site-header">
         <div class="container">
             <div class="header-wrapper">
@@ -84,11 +42,11 @@
                     </button>
                     
                     <ul class="nav-list">
-                        <li><a href="index.html" class="">Home</a></li>
-                        <li><a href="about.html" class="">About</a></li>
-                        <li><a href="services.html" class="">Services</a></li>
-                        <li><a href="portfolio.html" class="">Portfolio</a></li>
-                        <li><a href="contact.html" class="contact-link ">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                        <li><a href="contact.html" class="contact-link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -96,327 +54,308 @@
     </header>
        
     <main>
-        <!-- Page Header -->
-<section class="page-header">
-    <div class="container">
-        <h1>Portfolio</h1>
-    </div>
-    <div class="page-header-shape"></div>
-</section>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="page-hero-bg"></div>
+            <div class="container">
+                <div class="page-hero-content">
+                    <span class="hero-label">Our Work</span>
+                    <h1>Real Results. Real People.</h1>
+                    <p>See how we've helped small businesses grow online with purpose-driven marketing.</p>
+                </div>
+            </div>
+            <div class="page-hero-wave">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0 C300,60 600,60 900,20 L1200,40 L1200,120 L0,120 Z" fill="var(--bg-color)"></path>
+                </svg>
+            </div>
+        </section>
 
-<!-- Portfolio Intro -->
-<section class="portfolio-intro">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">Our Work</span>
-            <h2>Real Results. Real People.</h2>
-        </div>
-        <p class="intro-tagline">See how we've helped small businesses grow online with purpose-driven marketing.</p>
-    </div>
-</section>
+        <!-- Portfolio Filters -->
+        <section class="portfolio-filters-section">
+            <div class="container">
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Websites</button>
+                    <button class="filter-btn" data-filter="brand">Branding</button>
+                    <button class="filter-btn" data-filter="social">Social Media</button>
+                </div>
+            </div>
+        </section>
 
-<!-- Portfolio Filters -->
-<section class="portfolio-filters">
-    <div class="container">
-        <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="web">Websites</button>
-            <button class="filter-btn" data-filter="brand">Branding</button>
-            <button class="filter-btn" data-filter="social">Social Media</button>
-        </div>
-    </div>
-</section>
+        <!-- Portfolio Grid -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <!-- Portfolio Item 1 -->
+                    <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="0">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio-1.jpg" alt="Map Mosaic Website">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-category">Website Design</span>
+                                    <a href="https://mapmosaic-qp86.onrender.com/" target="_blank" class="view-project-btn">
+                                        View Live Site<i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Map Mosaic</h3>
+                            <p>Full-Stack Website Development, UI/UX Design, SEO Optimization, and Third-Party App Integration</p>
+                            <div class="results-tag">
+                                <i class="fas fa-chart-line"></i>
+                                <span>+75% User Retention After Redesign</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 2 -->
+                    <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio-2.jpg" alt="Aveo Capital">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-category">Website Design</span>
+                                    <span class="project-category">Social Media</span>
+                                    <a href="https://aveocapital.com" target="_blank" class="view-project-btn">
+                                        View Live Site<i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Aveo Capital</h3>
+                            <p>Full-Stack Financial Services Platform with Client Portal & Social Integration</p>
+                            <div class="results-tag">
+                                <i class="fas fa-chart-line"></i>
+                                <span>+300% Social Media Traffic</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 3 -->
+                    <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio-3.jpg" alt="Glacier Broadband">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-category">Branding</span>
+                                    <a href="https://glacierbroadband.com" target="_blank" class="view-project-btn">
+                                        View Live Site<i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Glacier Broadband</h3>
+                            <p>Logo Design, Brand Identity Development & Style Guide</p>
+                            <div class="results-tag">
+                                <i class="fas fa-chart-line"></i>
+                                <span>+40% Brand Recognition</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 4 -->
+                    <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio-4.jpg" alt="Mile High Networks Social Media">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-category">Social Media</span>
+                                    <a href="https://milehighnetworks.net" target="_blank" class="view-project-btn">
+                                        View Live Site<i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Mile High Networks</h3>
+                            <p>Social Media Management, Content Creation & Community Engagement</p>
+                            <div class="results-tag">
+                                <i class="fas fa-chart-line"></i>
+                                <span>+230% Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 5 -->
+                    <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="400">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio-5.jpg" alt="BBIG Designs Social Media">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-category">Social Media</span>
+                                    <a href="https://bbigdesigns.com/" target="_blank" class="view-project-btn">
+                                        View Live Site<i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>BBIG Designs</h3>
+                            <p>Social Media Management for Custom Belt Buckle Business</p>
+                            <div class="results-tag">
+                                <i class="fas fa-chart-line"></i>
+                                <span>+150% Social Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- Portfolio Grid -->
-<section class="portfolio-section">
-    <div class="container">
-        <div class="portfolio-grid">
-            <!-- Portfolio Item 1 -->
-            <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="0" onclick="window.open('https://mapmosaic.com', '_blank')">
-                <div class="portfolio-image">
-                    <img src="images/portfolio-1.jpg" alt="Map Mosaic Website">
-                    <div class="portfolio-overlay">
-                        <div class="overlay-content">
-                            <span class="project-category">Website Design</span>
-                            <a href="https://mapmosaic-qp86.onrender.com/" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
-                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
+        <!-- Process Showcase -->
+        <section class="process-showcase-section">
+            <div class="container">
+                <div class="process-showcase-grid">
+                    <div class="process-text">
+                        <span class="section-badge">Our Approach</span>
+                        <h2>How We Bring Vision to Life</h2>
+                        <p class="lead-text">Every project begins with understanding your unique goals and values. We then create a tailored strategy that aligns with your mission and resonates with your audience.</p>
+                        
+                        <div class="process-steps">
+                            <div class="process-step-item">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Discovery</h4>
+                                    <p>Understanding your business, values, and goals</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step-item">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Strategy</h4>
+                                    <p>Developing a tailored plan aligned with your mission</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step-item">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Creation</h4>
+                                    <p>Building assets that bring your vision to life</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step-item">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Results</h4>
+                                    <p>Measuring success and refining for growth</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="services.html" class="btn btn-primary">
+                            <span>Learn About Our Services</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="process-visual">
+                        <div class="process-image-wrapper">
+                            <img src="images/process-illustration.jpg" alt="Our Process">
+                            <div class="image-accent"></div>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-info">
-                    <h3>Map Mosaic</h3>
-                    <p>Full-Stack Website Development, UI/UX Design, SEO Optimization, and Third-Party App Integration</p>
-                    <div class="results-tag">
-                        <span>+75% User Retention After Redesign</span>
-                    </div>
-                </div>
             </div>
-            
-            <!-- Portfolio Item 2 -->
-            <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://aveocapital.com', '_blank')">
-                <div class="portfolio-image">
-                    <img src="images/portfolio-2.jpg" alt="Aveo Capital">
-                    <div class="portfolio-overlay">
-                        <div class="overlay-content">
-                            <span class="project-category">Website Design</span>
-                            <span class="project-category">Social Media</span>
-                            <a href="https://aveocapital.com" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
-                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>Aveo Capital</h3>
-                    <p>Full-Stack Financial Services Platform with Client Portal & Social Integration</p>
-                    <div class="results-tag">
-                        <span>+300% Social Media Traffic</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Portfolio Item 3 -->
-            <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="200" onclick="window.open('https://glacierbroadband.com', '_blank')">
-                <div class="portfolio-image">
-                    <img src="images/portfolio-3.jpg" alt="Glacier Broadband">
-                    <div class="portfolio-overlay">
-                        <div class="overlay-content">
-                            <span class="project-category">Social Media</span>
-                            <a href="https://glacierbroadband.com" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
-                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>Glacier Broadband</h3>
-                    <p>Logo Design, Brand Identity</p>
-                    <div class="results-tag">
-                        <span>+40% Brand Recognition</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Portfolio Item 4 -->
-            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="300" onclick="window.open('https://milehighnetworks.net', '_blank')">
-                <div class="portfolio-image">
-                    <img src="images/portfolio-4.jpg" alt="Mile High Networks Social Media">
-                    <div class="portfolio-overlay">
-                        <div class="overlay-content">
-                            <span class="project-category">Social Media</span>
-                            <a href="https://milehighnetworks.com" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
-                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>Mile High Networks</h3>
-                    <p>Social Media Management, Content Creation</p>
-                    <div class="results-tag">
-                        <span>+230% Engagement</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Portfolio Item 5 -->
-            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="500" onclick="window.open('https://bbigdesigns.com/', '_blank')">
-                <div class="portfolio-image">
-                    <img src="images/portfolio-5.jpg" alt="BBIG Designs Social Media">
-                    <div class="portfolio-overlay">
-                        <div class="overlay-content">
-                            <span class="project-category">Social Media</span>
-                            <a href="https://bbigdesigns.com/" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
-                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>BBIG Designs</h3>
-                    <p>Social Media Management for Custom Belt Buckle Business</p>
-                    <div class="results-tag">
-                        <span>+150% Social Engagement</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Background patterns -->
-    <div class="bg-pattern pattern-dots portfolio-pattern-1"></div>
-    <div class="bg-pattern pattern-lines portfolio-pattern-2"></div>
-</section>
+        </section>
 
-<!-- Process Showcase -->
-<section class="process-showcase">
-    <div class="container">
-        <div class="process-content">
-            <div class="process-text">
-                <span class="section-label">Our Approach</span>
-                <h2>How We Bring Vision to Life</h2>
-                <p>Every project begins with understanding your unique goals and values. We then create a tailored strategy that aligns with your mission and resonates with your audience.</p>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <div class="step-text">
-                            <h3>Discovery</h3>
-                            <p>Understanding your business, values, and goals</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <div class="step-text">
-                            <h3>Strategy</h3>
-                            <p>Developing a tailored plan aligned with your mission</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-text">
-                            <h3>Creation</h3>
-                            <p>Building assets that bring your vision to life</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <div class="step-text">
-                            <h3>Results</h3>
-                            <p>Measuring success and refining for growth</p>
-                        </div>
-                    </div>
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">What Clients Say</span>
+                    <h2>Client Testimonials</h2>
                 </div>
-                <a href="services.html" class="btn btn-primary mt-4">Learn About Our Services</a>
-            </div>
-            <div class="process-image">
-                <img src="images/process-illustration.jpg" alt="Our Process" class="rounded-image">
-                <div class="image-accent"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials-section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">What Clients Say</span>
-            <h2>Client Testimonials</h2>
-        </div>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <div class="testimonial-content">
-                    <p>"Working with Boulder Marketing gave our small business a huge online boost. Professional, kind, and truly understanding of our values. The results exceeded our expectations!"</p>
-                </div>
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <span>JS</span>
-                    </div>
-                    <div class="client-details">
-                        <h4>Jane Smith</h4>
-                        <p>Local Cafe Owner</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <div class="testimonial-content">
-                    <p>"Their team created a brand that truly reflects our values and mission. The work they did helped us connect with our community in meaningful ways."</p>
-                </div>
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <span>MJ</span>
-                    </div>
-                    <div class="client-details">
-                        <h4>Michael Johnson</h4>
-                        <p>Non-Profit Director</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <div class="testimonial-content">
-                    <p>"Our social media presence has completely transformed since working with Boulder Marketing. They understand our audience and create content that truly resonates."</p>
-                </div>
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <span>SW</span>
-                    </div>
-                    <div class="client-details">
-                        <h4>Sarah Williams</h4>
-                        <p>Boutique Owner</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="portfolio-cta">
-    <div class="container">
-        <div class="cta-content">
-            <h2>Ready to transform your online presence?</h2>
-            <p>Let's build something that brings your vision to life and connects with your audience.</p>
-            <a href="contact.html" class="btn btn-white btn-glow">Start Your Project</a>
-        </div>
-    </div>
-    <div class="cta-shape"></div>
-</section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Portfolio filtering
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
                 
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                // Get filter value
-                const filterValue = this.getAttribute('data-filter');
-                
-                // Filter portfolio items
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // Reveal elements on scroll
-        const revealElements = document.querySelectorAll('[data-aos]');
-        const revealOnScroll = function() {
-            revealElements.forEach(function(el) {
-                if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
-                    el.classList.add('revealed');
-                }
-            });
-        };
-        
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Initial check
-    });
-</script>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Working with Boulder Marketing gave our small business a huge online boost. Professional, kind, and truly understanding of our values. The results exceeded our expectations!"</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <span>JS</span>
+                            </div>
+                            <div class="client-details">
+                                <h4>Jane Smith</h4>
+                                <p>Local Cafe Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Their team created a brand that truly reflects our values and mission. The work they did helped us connect with our community in meaningful ways."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <span>MJ</span>
+                            </div>
+                            <div class="client-details">
+                                <h4>Michael Johnson</h4>
+                                <p>Non-Profit Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Our social media presence has completely transformed since working with Boulder Marketing. They understand our audience and create content that truly resonates."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <span>SW</span>
+                            </div>
+                            <div class="client-details">
+                                <h4>Sarah Williams</h4>
+                                <p>Boutique Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-bg-gradient"></div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Online Presence?</h2>
+                    <p>Let's build something meaningful together that brings your vision to life.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-white btn-pulse">
+                            <i class="far fa-envelope"></i>
+                            <span>Start Your Project</span>
+                        </a>
+                        <a href="services.html" class="btn btn-outline-white">
+                            <span>View Our Services</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    
+    <!-- Scroll to top button -->
+    <a href="#" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
     
     <footer class="site-footer">
         <div class="container">
@@ -472,8 +411,9 @@
             </div>
         </div>
     </footer>
-    <!-- jQuery (Only if needed for testimonial slider) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <!-- Custom JS -->
     <script src="js/main.js"></script>
